@@ -5,7 +5,7 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-                sh ' echo compile'
+                sh ' echo compile new branch'
             }
         }
 

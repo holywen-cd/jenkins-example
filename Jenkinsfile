@@ -5,6 +5,7 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
+                sh " echo $GIT_BRANCH is the current branch"
                 sh ' echo compile'
             }
         }

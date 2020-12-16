@@ -7,7 +7,7 @@ pipeline {
             steps {
                 sh " echo $GIT_BRANCH is the current branch"
                 sh ' echo Triggering CD'
-                cloudBeesFlowTriggerRelease configuration: 'Flow', parameters: '{"release":{"releaseName":"Multi-branch-Release-pullscm","pipelineName":"pipeline_Multi-branch-Release-pullscm","parameters":[{"parameterName":"branch","parameterValue":"$GIT_BRANCH"}]}}', projectName: 'HolyPlayground', releaseName: 'Multi-branch-Release-pullscm', startingStage: ''
+                cloudBeesFlowTriggerRelease configuration: 'Flow', parameters: '{"release":{"releaseName":"Multi-branch-Release-pullscm","pipelineName":"pipeline_Multi-branch-Release-pullscm","stages":[{"stageName":"Stage 1","stageValue":true}],"parameters":[{"parameterName":"branch","parameterValue":"$GIT_BRANCH"}]}}', projectName: 'HolyPlayground', releaseName: 'Multi-branch-Release-pullscm', startingStage: ''
             }
         }
     }

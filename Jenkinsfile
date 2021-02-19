@@ -6,6 +6,7 @@ pipeline {
         sh " echo $GIT_BRANCH is the current branch"
         sh ' echo compile'
         sh 'mvn compile'
+        archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
       }
     }
 

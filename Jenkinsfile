@@ -13,10 +13,15 @@ pipeline {
         }
 
         stage('Parallel Stage') {
+          agent any
+          environment {
+            BUZZ_NAME = 'Holy'
+          }
           steps {
             sh 'echo "abc"'
             node(label: '*') {
-              sh 'echo agent'
+              sh '''echo agent
+echo BUZZ_NAME $BUZZ_NAME'''
             }
 
           }

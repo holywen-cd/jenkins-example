@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('Compile Stage') {
       parallel {
+        failfast true
         stage('Compile Stage') {
           steps {
             sh " echo $GIT_BRANCH is the current branch"

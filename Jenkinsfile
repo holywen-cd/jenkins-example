@@ -20,11 +20,8 @@ pipeline {
           }
           steps {
             sh 'echo "abc"'
-            node(label: '*') {
-              sh '''echo agent
+            sh '''echo agent
 echo BUZZ_NAME $BUZZ_NAME'''
-            }
-
           }
         }
 

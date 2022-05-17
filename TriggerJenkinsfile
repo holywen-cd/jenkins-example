@@ -7,6 +7,7 @@ pipeline {
             steps {
                 sh " echo $GIT_BRANCH is the current branch"
                 sh ' echo Triggering CD'
+                sh ' sleep 10'
                 cloudBeesFlowTriggerRelease configuration: 'Flow', parameters: "{'release':{'releaseName':'Triggered by Jenkins','pipelineName':'pipeline_Triggered by Jenkins','stages':[{'stageName':'Stage 1','stageValue':true}],'parameters':[{'parameterName':'branch','parameterValue':'$GIT_BRANCH'}]}}", projectName: 'Holy Proj', releaseName: 'Triggered by Jenkins', startingStage: ''
             }
         }

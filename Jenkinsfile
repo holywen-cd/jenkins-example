@@ -9,8 +9,8 @@ pipeline {
             sh " echo $GIT_BRANCH is the current branch"
             sh ' echo compile'
             sh ' sleep 20'
-            sh 'mvn compile'
-            archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
+            //sh 'mvn compile'
+            //archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
           }
         }
 

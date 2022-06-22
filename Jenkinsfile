@@ -22,8 +22,8 @@ pipeline {
           steps {
             sh 'echo "abc"'
             sh '''echo agent
-echo BUZZ_NAME $BUZZ_NAME'''
-            sh '''echo uploading to dsnexus: https://mynexus.com/springboot.jar (50 M uploaded)'''
+echo BUZZ_NAME $BUZZ_NAME
+echo uploading to dsnexus: https://mynexus.com/springboot.jar (50 M uploaded)'''
           }
         }
 

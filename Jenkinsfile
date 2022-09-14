@@ -36,11 +36,10 @@ echo "uploading to dsnexus: https://mynexus.com/springboot.jar (50 M uploaded)"'
       }
     }
     
-    stage('Deploy approval'){
-      input "Deploy to prod?"
-    }
-    
     stage('Deployment Stage') {
+      input {
+       message "Deploy to prod?"
+      }
       steps {
         sh ' echo Deployment'
       }

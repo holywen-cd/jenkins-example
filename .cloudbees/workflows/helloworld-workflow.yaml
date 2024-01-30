@@ -12,5 +12,7 @@ jobs:
         name: Say hello
         kind: build
         shell: sh
-        run: |
+        run: |-
           echo "hello world"
+          mvn compile
+          echo "build done"

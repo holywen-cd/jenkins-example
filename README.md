@@ -1,3 +1,3 @@
 ## Simple mult-branch job demo
-update 6
+update 1
 something
